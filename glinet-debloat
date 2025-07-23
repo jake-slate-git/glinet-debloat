@@ -5,6 +5,7 @@
 
 echo "[+] Removing cloud-related GL.iNet packages..."
 
+opkg update
 opkg remove gl-sdk4-ui-cloud --autoremove
 opkg remove gl-sdk4-ui-dynamicdns --autoremove
 opkg remove gl-sdk4-ui-adguardhome --autoremove
