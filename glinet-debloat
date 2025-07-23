@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# remove_glinet_bloat.sh
+# Script to remove GL.iNet AXT1800 default cloud-related packages
+
+echo "[+] Removing cloud-related GL.iNet packages..."
+
+opkg remove gl-sdk4-ui-cloud --autoremove
+opkg remove gl-sdk4-ui-dynamicdns --autoremove
+opkg remove gl-sdk4-ui-adguardhome --autoremove
+opkg remove lua-eco-mqtt --autoremove
+
+echo "[+] Rebooting device..."
+reboot
